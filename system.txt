@@ -1,0 +1,54 @@
+% Repositories:
+sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
+% sudo add-apt-repository ppa:webupd8team/java
+sudo add-apt-repository ppa:numix/ppa
+sudo apt-get update
+
+% This is for Spotify:
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59
+
+% Packages:
+sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science numix-gtk-theme numix-icon-theme numix-icon-theme-circle numix-wallpaper-saucy redshift
+
+% From web:
+Sublime Text 3 	http://www.sublimetext.com/3
+Sublime PM	https://sublime.wbond.net/installation
+Chrome 		https://www.google.com/intl/en/chrome/browser/
+oh-my-zsh	wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+
+% GUI Settings:
+System Settings -> 
+ * Mouse -> Natural Scrolling
+Unity-Tweak-Tool -> 
+ * Launcher -> 32px 
+ * Search -> uncheck Search Online Resources
+ * Panel -> Transparency level -> 3/4
+ 			Indicators -> Date & Weekday
+ 			Display remaining battery life
+ * Workspace settings -> 9x1
+ * Window snapping -> all 4 corners
+ * Theme -> Numix
+Sublime ->
+ * theme: LAZY
+ * indent using spaces
+
+subl ~/.zshrc
+ * ZSH_THEME="mh"
+ * alias x=xdg-open
+
+% If Eclipse has no menu options:
+sudo subl /usr/share/applications/eclipse.desktop
+Change the line that says: Exec=eclipse
+to: Exec=env UBUNTU_MENUPROXY=0 eclipse
+
+% Disable bluetooth:
+% This doesn't work... 
+sudo echo "BLUETOOTH_ENABLED=0" >> /etc/default/bluetooth
+
+sudo apt-get autoremove indicator-messages; killall indicator-messages-service
+git config --global user.email "seveneightn9ne@gmail.com"
+git config --global user.name "Jess Kenney"
+ssh-keygen -t rsa -C "seveneightn9ne@gmail.com"
+% Startup Applications -> Add
+	redshift -O 5300K
+
