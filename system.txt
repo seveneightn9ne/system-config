@@ -31,6 +31,8 @@ Unity-Tweak-Tool ->
 Sublime ->
  * theme: LAZY
  * indent using spaces
+ * Install -> LaTeXTools
+ * LaTeXTools Settings -> traditional builder
 
 subl ~/.zshrc
  * ZSH_THEME="mh"
