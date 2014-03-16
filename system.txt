@@ -2,13 +2,14 @@
 sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 % sudo add-apt-repository ppa:webupd8team/java
 sudo add-apt-repository ppa:numix/ppa
+sudo add-apt-repository ppa:tualatrix/ppa
 sudo apt-get update
 
 % This is for Spotify:
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59
 
 % Packages:
-sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science numix-gtk-theme numix-icon-theme numix-icon-theme-circle numix-wallpaper-saucy redshift
+sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science numix-gtk-theme numix-icon-theme numix-icon-theme-circle numix-wallpaper-saucy redshift ubuntu-tweak indicator-multiload
 
 % From web:
 Sublime Text 3 	http://www.sublimetext.com/3
@@ -33,10 +34,14 @@ Sublime ->
  * indent using spaces
  * Install -> LaTeXTools
  * LaTeXTools Settings -> traditional builder
+Ubuntu Tweak ->
+ * Disable HUD
 
 subl ~/.zshrc
  * ZSH_THEME="mh"
- * alias x=xdg-open
+ * if [ -f ~/.aliases ]; then
+ *    . ~/.aliases
+ * fi
 
 % If Eclipse has no menu options:
 sudo subl /usr/share/applications/eclipse.desktop
@@ -53,8 +58,10 @@ sudo apt-get autoremove indicator-messages; killall indicator-messages-service
 git config --global user.email "seveneightn9ne@gmail.com"
 git config --global user.name "Jess Kenney"
 git config --global push.default simple
+git config --global color.ui true
 ssh-keygen -t rsa -C "seveneightn9ne@gmail.com"
 
 % Startup Applications -> Add
 	redshift -O 5300K
 
+sudo visudo -> NOPASSWD:ALL
