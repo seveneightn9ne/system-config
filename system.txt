@@ -46,10 +46,13 @@ to: Exec=env UBUNTU_MENUPROXY=0 eclipse
 sudo echo "BLUETOOTH_ENABLED=0" >> /etc/default/bluetooth
 
 sudo apt-get autoremove indicator-messages; killall indicator-messages-service
+
+% git
 git config --global user.email "seveneightn9ne@gmail.com"
 git config --global user.name "Jess Kenney"
 git config --global push.default simple
 ssh-keygen -t rsa -C "seveneightn9ne@gmail.com"
+
 % Startup Applications -> Add
 	redshift -O 5300K
 
