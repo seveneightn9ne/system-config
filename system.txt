@@ -9,7 +9,10 @@ sudo apt-get update
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59
 
 % Packages:
-sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science numix-gtk-theme numix-icon-theme numix-icon-theme-circle numix-wallpaper-saucy redshift ubuntu-tweak indicator-multiload
+sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science numix-gtk-theme numix-icon-theme numix-icon-theme-circle numix-wallpaper-saucy redshift ubuntu-tweak indicator-multiload krb5-user krb5-config
+
+% Package configs:
+Kerberos default realm: ATHENA.MIT.EDU
 
 % From web:
 Sublime Text 3 	http://www.sublimetext.com/3
@@ -21,7 +24,8 @@ oh-my-zsh	wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 System Settings -> 
  * Mouse -> Natural Scrolling
 Unity-Tweak-Tool -> 
- * Launcher -> 32px 
+ * Launcher -> 32px
+ 			   Icon background -> per workspace 
  * Search -> uncheck Search Online Resources
  * Panel -> Transparency level -> 3/4
  			Indicators -> Date & Weekday
@@ -65,3 +69,7 @@ ssh-keygen -t rsa -C "seveneightn9ne@gmail.com"
 	redshift -O 5300K
 
 sudo visudo -> NOPASSWD:ALL
+
+% To get an athena ticket: 
+% Not yet sure if this will become useful...
+kinit -p jessk
