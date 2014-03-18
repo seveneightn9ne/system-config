@@ -19,6 +19,11 @@ Sublime Text 3 	http://www.sublimetext.com/3
 Sublime PM	https://sublime.wbond.net/installation
 Chrome 		https://www.google.com/intl/en/chrome/browser/
 oh-my-zsh	wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+spotify-notify	git clone https://github.com/sveint/spotify-notify.git spotify-notify
+				chmod a+x spotify-notify.py
+
+% Make all startup apps visible:
+sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
 
 % GUI Settings:
 System Settings -> 
@@ -38,8 +43,12 @@ Sublime ->
  * indent using spaces
  * Install -> LaTeXTools
  * LaTeXTools Settings -> traditional builder
+ 						  forward_sync = false
 Ubuntu Tweak ->
  * Disable HUD
+Startup Applications ->
+ * redshift -O 5300K
+ * /home/jessk/spotify-notify/spotify-notify.py -s
 
 subl ~/.zshrc
  * ZSH_THEME="mh"
@@ -65,9 +74,6 @@ git config --global push.default simple
 git config --global color.ui true
 ssh-keygen -t rsa -C "seveneightn9ne@gmail.com"
 Put ssh key in github
-
-% Startup Applications -> Add
-	redshift -O 5300K
 
 sudo visudo -> NOPASSWD:ALL
 
