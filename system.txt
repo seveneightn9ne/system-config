@@ -42,7 +42,7 @@ Sublime ->
  * theme: LAZY
  * indent using spaces
  * Install -> LaTeXTools
- * LaTeXTools Settings -> traditional builder
+ * LaTeXTools Settings -> traditional builder (try "simple" if it's not finding packages)
  						  forward_sync = false
 Ubuntu Tweak ->
  * Disable HUD
