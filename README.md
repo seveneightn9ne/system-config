@@ -5,3 +5,4 @@ Follow instructions in system.txt and put the other files in your user directory
 ### TODO 
 
 * figure out how to disable bluetooth on system startup
+* Why does indicator-multiload sometimes crash?
