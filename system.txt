@@ -1,15 +1,16 @@
 % Repositories:
 sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 % sudo add-apt-repository ppa:webupd8team/java
-sudo add-apt-repository ppa:numix/ppa
-sudo add-apt-repository ppa:tualatrix/ppa
+sudo add-apt-repository ppa:numix/ppa         % numix window theme
+sudo add-apt-repository ppa:tualatrix/ppa     % indicator-multiload?
+sudo add-apt-repository ppa:ehoover/compholio % netflix
 sudo apt-get update
 
 % This is for Spotify:
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59
 
 % Packages:
-sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science texlive-latex-extra numix-gtk-theme numix-icon-theme numix-icon-theme-circle numix-wallpaper-saucy redshift ubuntu-tweak indicator-multiload krb5-user krb5-config
+sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science texlive-latex-extra numix-gtk-theme numix-icon-theme numix-icon-theme-circle numix-wallpaper-saucy redshift ubuntu-tweak indicator-multiload krb5-user krb5-config netflix-desktop
 
 % Package configs:
 Kerberos default realm: ATHENA.MIT.EDU
@@ -78,3 +79,6 @@ kinit -p jessk
 % to renew:
 kinit -R
 % For athena-based repos, use athena instead of jessk@athena.dialup.mit.edu as the host
+
+% to get Netflix working
+run `netflix` and follow all install instructions
