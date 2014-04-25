@@ -57,10 +57,10 @@ Startup Applications ->
  * /home/jessk/spotify-notify/spotify-notify.py -s
 
 % subl ~/.zshrc
-%  * ZSH_THEME="mh"
-%  * if [ -f ~/.aliases ]; then
-%  *    . ~/.aliases
-%  * fi
+ZSH_THEME="mh"
+if [ -f ~/.aliases ]; then
+   . ~/.aliases
+fi
 
 Synapse settings
  * Startup on login

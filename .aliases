@@ -18,3 +18,5 @@ alias 6.004="~/Dropbox/School/2014\ Spring\6.004"
 alias 6.005="~/Dropbox/School/2014\ Spring\6.005"
 alias 6.006="~/Dropbox/School/2014\ Spring\6.006"
 alias 6.036="~/Dropbox/School/2014\ Spring\6.036"
+
+alias ggs="git status"
