@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59
 
 % Packages:
-sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science texlive-latex-extra numix-gtk-theme numix-icon-theme numix-icon-theme-circle numix-wallpaper-saucy redshift ubuntu-tweak indicator-multiload netflix-desktop
+sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science texlive-latex-extra numix-gtk-theme numix-icon-theme numix-icon-theme-circle numix-wallpaper-saucy redshift ubuntu-tweak indicator-multiload netflix-desktop ipython
 
 % If synapse is not yet available in 14.04 use ppa:synapse-core/testing
 
