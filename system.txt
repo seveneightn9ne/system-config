@@ -40,6 +40,7 @@ Unity-Tweak-Tool ->
  * Workspace settings -> 9x1
  * Window snapping -> all 4 corners
  * Theme -> Numix
+ * Scrolling -> Legacy Scrollbars
 Sublime ->
  * theme: LAZY
  * indent using spaces
