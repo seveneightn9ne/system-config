@@ -2,21 +2,19 @@
 sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 % sudo add-apt-repository ppa:webupd8team/java
 sudo add-apt-repository ppa:numix/ppa         % numix window theme
-sudo add-apt-repository ppa:tualatrix/ppa     % ubuntu-tweak
+% sudo add-apt-repository ppa:tualatrix/ppa     % ubuntu-tweak
 sudo add-apt-repository ppa:ehoover/compholio % netflix
 sudo add-apt-repository ppa:synapse-core/ppa  % synapse
-sudo apt-get update
-
+% If synapse is not yet available in 14.04 use ppa:synapse-core/testing
 % This is for Spotify:
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59
+sudo apt-get update
 
 % Packages:
-sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science texlive-latex-extra numix-gtk-theme numix-icon-theme numix-icon-theme-circle numix-wallpaper-saucy redshift ubuntu-tweak indicator-multiload netflix-desktop ipython
-
-% If synapse is not yet available in 14.04 use ppa:synapse-core/testing
+sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science texlive-latex-extra numix-gtk-theme numix-icon-theme numix-icon-theme-circle redshift indicator-multiload netflix-desktop ipython
 
 % Less awesome packages:
-% krb5-user krb5-config 
+% krb5-user krb5-config ubuntu-tweak
 % Kerberos default realm: ATHENA.MIT.EDU
 
 % From web:
@@ -36,7 +34,7 @@ System Settings ->
  * Mouse -> Natural Scrolling
 Unity-Tweak-Tool -> 
  * Launcher -> 32px
- 			   Icon background -> per workspace 
+ * Icon background -> per workspace 
  * Search -> uncheck Search Online Resources
  * Panel -> Transparency level -> 3/4
  			Indicators -> Date & Weekday
@@ -50,8 +48,8 @@ Sublime ->
  * Install -> LaTeXTools
  * LaTeXTools Settings -> traditional builder (try "simple" if it's not finding packages)
  						  forward_sync = false
-Ubuntu Tweak ->
- * Disable HUD
+% Ubuntu Tweak ->
+%  * Disable HUD
 Startup Applications ->
  * redshift -O 5300K
  * /home/jessk/spotify-notify/spotify-notify.py -s
@@ -70,23 +68,10 @@ sudo subl /usr/share/applications/eclipse.desktop
 Change the line that says: Exec=eclipse
 to: Exec=env UBUNTU_MENUPROXY=0 eclipse
 
-% Disable bluetooth:
-% This doesn't work... 
-sudo echo "BLUETOOTH_ENABLED=0" >> /etc/default/bluetooth
-
-sudo apt-get autoremove indicator-messages; killall indicator-messages-service
+% sudo apt-get autoremove indicator-messages; killall indicator-messages-service
 
 % git
 ssh-keygen -t rsa -C "seveneightn9ne@gmail.com"
 Put ssh key in github
 
 sudo visudo -> NOPASSWD:ALL
-
-% To get an athena ticket: 
-kinit -p jessk
-% to renew:
-kinit -R
-% For athena-based repos, use athena instead of jessk@athena.dialup.mit.edu as the host
-
-% to get Netflix working
-run `netflix` and follow all install instructions
