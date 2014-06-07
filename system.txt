@@ -22,9 +22,7 @@ Sublime Text 3 	http://www.sublimetext.com/3
 Sublime PM	https://sublime.wbond.net/installation
 Chrome 		https://www.google.com/intl/en/chrome/browser/
 oh-my-zsh	wget --no-check-certificate http://install.ohmyz.sh -O - | sh
-( chsh -s /usr/bin/zsh ) 
-spotify-notify	git clone https://github.com/sveint/spotify-notify.git spotify-notify
-				chmod a+x spotify-notify.py
+( chsh -s /usr/bin/zsh or /usr/zsh) 
 
 % Make all startup apps visible:
 sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
@@ -52,7 +50,6 @@ Sublime ->
 %  * Disable HUD
 Startup Applications ->
  * redshift -O 5300K
- * /home/jessk/spotify-notify/spotify-notify.py -s
 
 % subl ~/.zshrc
 ZSH_THEME="mh"
