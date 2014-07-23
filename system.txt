@@ -5,13 +5,14 @@ sudo add-apt-repository ppa:numix/ppa         % numix window theme
 % sudo add-apt-repository ppa:tualatrix/ppa     % ubuntu-tweak
 sudo add-apt-repository ppa:ehoover/compholio % netflix
 sudo add-apt-repository ppa:synapse-core/ppa  % synapse
+sudo add-apt-repository ppa:chris-lea/node.js  % node.js
 % If synapse is not yet available in 14.04 use ppa:synapse-core/testing
 % This is for Spotify:
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59
 sudo apt-get update
 
 % Packages:
-sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science texlive-latex-extra numix-gtk-theme numix-icon-theme numix-icon-theme-circle redshift indicator-multiload netflix-desktop ipython python-setuptools
+sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science texlive-latex-extra numix-gtk-theme numix-icon-theme numix-icon-theme-circle redshift indicator-multiload netflix-desktop ipython python-setuptools nodejs
 
 % Less awesome packages:
 % krb5-user krb5-config ubuntu-tweak
