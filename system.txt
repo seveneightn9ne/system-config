@@ -74,3 +74,7 @@ ssh-keygen -t rsa -C "seveneightn9ne@gmail.com"
 Put ssh key in github
 
 sudo visudo -> NOPASSWD:ALL
+
+% enable hibernate
+create file /etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
+put contents from the file
