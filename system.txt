@@ -1,39 +1,36 @@
 % Repositories:
-sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 % sudo add-apt-repository ppa:webupd8team/java
 sudo add-apt-repository ppa:numix/ppa         % numix window theme
 % sudo add-apt-repository ppa:tualatrix/ppa     % ubuntu-tweak
-sudo add-apt-repository ppa:ehoover/compholio % netflix
 sudo add-apt-repository ppa:synapse-core/ppa  % synapse
 sudo add-apt-repository ppa:chris-lea/node.js  % node.js
 % If synapse is not yet available in 14.04 use ppa:synapse-core/testing
-% This is for Spotify:
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59
 sudo apt-get update
 
 % Packages:
-sudo apt-get install synapse eclipse spotify-client unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science texlive-latex-extra numix-gtk-theme numix-icon-theme numix-icon-theme-circle redshift indicator-multiload netflix-desktop ipython python-setuptools nodejs
+sudo apt-get install synapse eclipse unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science texlive-latex-extra numix-gtk-theme numix-icon-theme numix-icon-theme-circle redshift indicator-multiload ipython python-setuptools nodejs terminator gnome-tweak-tool
 
 % Less awesome packages:
 % krb5-user krb5-config ubuntu-tweak
 % Kerberos default realm: ATHENA.MIT.EDU
 
 % From web:
-Sublime Text 3 	http://www.sublimetext.com/3
-Sublime PM	https://sublime.wbond.net/installation
+spacemacs       git clone --recursive http://github.com/syl20bnr/spacemacs ~/.emacs.d
+% Sublime Text 3 	http://www.sublimetext.com/3
+% Sublime PM	https://sublime.wbond.net/installation
 Chrome 		https://www.google.com/intl/en/chrome/browser/
 oh-my-zsh	wget --no-check-certificate http://install.ohmyz.sh -O - | sh
-( chsh -s /usr/bin/zsh or /usr/zsh) 
+( chsh -s /usr/bin/zsh or /usr/zsh)
 
 % Make all startup apps visible:
 sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
 
 % GUI Settings:
-System Settings -> 
+System Settings ->
  * Mouse -> Natural Scrolling
-Unity-Tweak-Tool -> 
+Unity-Tweak-Tool ->
  * Launcher -> 32px
- * Icon background -> per workspace 
+ * Icon background -> per workspace
  * Search -> uncheck Search Online Resources
  * Panel -> Transparency level -> 3/4
  			Indicators -> Date & Weekday
