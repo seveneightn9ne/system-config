@@ -8,7 +8,7 @@ sudo add-apt-repository ppa:chris-lea/node.js  % node.js
 sudo apt-get update
 
 % Packages:
-sudo apt-get install synapse eclipse unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science texlive-latex-extra numix-gtk-theme numix-icon-theme numix-icon-theme-circle redshift indicator-multiload ipython python-setuptools nodejs terminator gnome-tweak-tool
+sudo apt-get install synapse eclipse unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science texlive-latex-extra numix-gtk-theme numix-icon-theme numix-icon-theme-circle redshift indicator-multiload ipython python-setuptools nodejs terminator gnome-tweak-tool trash-cli graphviz htop pass openssh-server fail2ban xournal entr
 
 % Less awesome packages:
 % krb5-user krb5-config ubuntu-tweak
@@ -75,3 +75,6 @@ sudo visudo -> NOPASSWD:ALL
 % enable hibernate
 create file /etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
 put contents from the file
+
+% firewall
+sudo ufw enable
