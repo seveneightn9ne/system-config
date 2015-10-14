@@ -8,17 +8,52 @@ alias ping='ping -c 5'
 alias wget='wget -c'
 alias re="exec $SHELL"
 alias myip="ifconfig | grep inet\ addr"
+alias clipcopy="xclip -selection clipboard"
+alias clippaste="xclip -selection clipboard -o"
+alias arrsync='rsync --archive --itemize-changes --compress --partial --progress -vv'
+alias s="sudo !!"
 
 alias apts="apt-cache search"
 alias apti="sudo apt-get install"
 alias aptl="dpkg --get-selections"
 
 alias school="~/School"
-alias 6.004="~/School/6.004"
-alias 6.005="~/School/6.005"
-alias 6.006="~/School/6.006"
-alias 6.036="~/School/6.036"
 
 alias ggs="git status"
 alias ggd="git diff"
 alias gcm="git commit -am"
+alias ggp="git push"
+
+function mkgo() {
+  if [ -n "$@" ]
+  then
+    mkdir "$@"
+    cd "$@"
+  fi
+}
+
+function template() {
+  if [ -n "$1" ]
+  then
+    SUFFIX="${1#*.}"
+    TEMPLATE=`ls $HOME/Templates/*.$SUFFIX`
+    cp $TEMPLATE "$1"
+    $EDITOR "$1"
+  fi
+}
+
+function pwgen() {
+  read -s -p "Enter secret key: " secretkey
+  echo -n "$1$secretkey"
+  }
+
+alias vim="gvim -v"
+alias vi="gvim -v"
+alias taksman="python ~/git/taksman/taksman"
+alias hashpass="python ~/git/hashpass/hashpass.py"
+
+alias edwin="~/905/mit-scheme/bin/mit-scheme --edit --heap 100000"
+alias mit-scheme="~/905/mit-scheme/bin/mit-scheme"
+alias eclipse="/opt/eclipse/eclipse"
+alias arrsync="rsync --archive --itemize-changes --compress --partial --progress"
+alias hashpass="python ~/git/hashpass/hashpass.py"
