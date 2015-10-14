@@ -1,26 +1,26 @@
 % Repositories:
-% sudo add-apt-repository ppa:webupd8team/java
 sudo add-apt-repository ppa:numix/ppa         % numix window theme
-% sudo add-apt-repository ppa:tualatrix/ppa     % ubuntu-tweak
-sudo add-apt-repository ppa:synapse-core/ppa  % synapse
 sudo add-apt-repository ppa:chris-lea/node.js  % node.js
-% If synapse is not yet available in 14.04 use ppa:synapse-core/testing
 sudo apt-get update
 
 % Packages:
-sudo apt-get install synapse eclipse unity-tweak-tool nautilus-dropbox zsh git texlive python-sklearn latexmk texlive-science texlive-latex-extra numix-gtk-theme numix-icon-theme numix-icon-theme-circle redshift indicator-multiload ipython python-setuptools nodejs terminator gnome-tweak-tool trash-cli graphviz htop pass openssh-server fail2ban xournal entr
-
-% Less awesome packages:
-% krb5-user krb5-config ubuntu-tweak
-% Kerberos default realm: ATHENA.MIT.EDU
+sudo apt-get install zsh vim unity-tweak-tool nautilus-dropbox zsh git numix-gtk-theme numix-icon-theme numix-icon-theme-circle redshift indicator-multiload ipython python-setuptools nodejs terminator gnome-tweak-tool trash-cli graphviz htop pass openssh-server fail2ban xournal entr scala alacarte python-pip
+% bulky ones:
+sudo apt-get install texlive python-sklearn latexmk texlive-science texlive-latex-extra
 
 % From web:
-spacemacs       git clone --recursive http://github.com/syl20bnr/spacemacs ~/.emacs.d
-% Sublime Text 3 	http://www.sublimetext.com/3
-% Sublime PM	https://sublime.wbond.net/installation
-Chrome 		https://www.google.com/intl/en/chrome/browser/
-oh-my-zsh	wget --no-check-certificate http://install.ohmyz.sh -O - | sh
-( chsh -s /usr/bin/zsh or /usr/zsh)
+% spacemacs:
+git clone --recursive http://github.com/syl20bnr/spacemacs ~/.emacs.d
+%% Chrome 		https://www.google.com/intl/en/chrome/browser/
+% oh-my-zsh:
+wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+( chsh -s /usr/bin/zsh or /usr/zsh, log out/in)
+% Vundle:
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+% Set up Vundle.
+% Load vimrc
+% Open vim, run :PluginInstall or something like that (it tab completes)
 
 % Make all startup apps visible:
 sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
@@ -39,32 +39,10 @@ Unity-Tweak-Tool ->
  * Window snapping -> all 4 corners
  * Theme -> Numix
  * Scrolling -> Legacy Scrollbars
-Sublime ->
- * theme: LAZY
- * indent using spaces
- * Install -> LaTeXTools
- * LaTeXTools Settings -> traditional builder (try "simple" if it's not finding packages)
- 						  forward_sync = false
-% Ubuntu Tweak ->
-%  * Disable HUD
+
 Startup Applications ->
  * redshift -O 5300K
 
-% subl ~/.zshrc
-ZSH_THEME="mh"
-if [ -f ~/.aliases ]; then
-   . ~/.aliases
-fi
-
-Synapse settings
- * Startup on login
-
-% If Eclipse has no menu options:
-sudo subl /usr/share/applications/eclipse.desktop
-Change the line that says: Exec=eclipse
-to: Exec=env UBUNTU_MENUPROXY=0 eclipse
-
-% sudo apt-get autoremove indicator-messages; killall indicator-messages-service
 
 % git
 ssh-keygen -t rsa -C "seveneightn9ne@gmail.com"
