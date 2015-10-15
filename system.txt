@@ -31,7 +31,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 %          -> add python ~/git/hashpass/hashpass-gui.py
 
 % PIP packages (TODO add more?)
-sudo pip install docopt
+sudo pip install docopt pyperclip matplotlib
 
 % Make all startup apps visible:
 sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
