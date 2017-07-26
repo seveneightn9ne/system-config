@@ -85,4 +85,6 @@ tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 vi .profile
 # export PATH=$PATH:/usr/local/go/bin
 
+# Copy game files from old computer
+
 
