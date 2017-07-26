@@ -27,6 +27,7 @@ cd
 
 cp git/system-config/.aliases ~
 cp git/system-config/.gitconfig ~
+cp git/system-config/.ssh/config ~/.ssh/config
 
 # setup vim
 mkdir -p .vim/undo .vim/backup .vim/swap
