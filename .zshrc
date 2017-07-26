@@ -74,7 +74,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-export GPGKEY=87D6BC54
+# export GPGKEY=87D6BC54
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # eval "$(rbenv init -)"
 export EDITOR="vi"
@@ -93,12 +93,4 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
-# taksman autocompletion
-_taksman_complete() {
-  local word completions
-  word="$1"
-  completions="$(ls -1 $HOME/.taksman/entry)"
-  reply=( "${(ps:\n:)completions}" )
-}
-
-compctl -K _taksman_complete taksman
+export PASSWORD_STORE_DIR="$HOME/Dropbox/password-store"

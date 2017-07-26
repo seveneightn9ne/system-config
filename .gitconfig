@@ -1,5 +1,5 @@
 [user]
-	email = seveneightn9ne@gmail.com
+	email = jess@jesskenney.com
 	name = Jess Kenney
 [push]
 	default = simple
@@ -8,4 +8,5 @@
 [branch]
 	autosetuprebase = always
 [alias]
-	l = log --all --graph --oneline --decorate
+    l = log --all --graph --oneline --decorate
+    roar = !git fetch origin master:master && git rebase master

@@ -1,8 +1,4 @@
-alias ..='cd ..'
-alias apt-get='sudo apt-get'
 alias x='xdg-open'
-alias c='clear'
-alias reboot='sudo reboot'
 alias diff='colordiff'
 alias ping='ping -c 5'
 alias wget='wget -c'
@@ -11,18 +7,16 @@ alias myip="ifconfig | grep inet\ addr"
 alias clipcopy="xclip -selection clipboard"
 alias clippaste="xclip -selection clipboard -o"
 alias arrsync='rsync --archive --itemize-changes --compress --partial --progress -vv'
-alias s="sudo !!"
 
 alias apts="apt-cache search"
-alias apti="sudo apt-get install"
+alias apti="sudo apt install"
 alias aptl="dpkg --get-selections"
-
-alias school="~/School"
 
 alias ggs="git status"
 alias ggd="git diff"
 alias gcm="git commit -am"
 alias ggp="git push"
+alias gca="git commit -a --amend"
 
 function mkgo() {
   if [ -n "$@" ]
@@ -32,28 +26,7 @@ function mkgo() {
   fi
 }
 
-function template() {
-  if [ -n "$1" ]
-  then
-    SUFFIX="${1#*.}"
-    TEMPLATE=`ls $HOME/Templates/*.$SUFFIX`
-    cp $TEMPLATE "$1"
-    $EDITOR "$1"
-  fi
-}
-
-function pwgen() {
-  read -s -p "Enter secret key: " secretkey
-  echo -n "$1$secretkey"
-  }
-
 alias vim="gvim -v"
 alias vi="gvim -v"
-alias taksman="python ~/git/taksman/taksman"
 alias hashpass="python ~/git/hashpass/hashpass.py"
 
-alias edwin="~/905/mit-scheme/bin/mit-scheme --edit --heap 100000"
-alias mit-scheme="~/905/mit-scheme/bin/mit-scheme"
-alias eclipse="/opt/eclipse/eclipse"
-alias arrsync="rsync --archive --itemize-changes --compress --partial --progress"
-alias hashpass="python ~/git/hashpass/hashpass.py"

@@ -98,7 +98,6 @@ nnoremap <S-Space> i
 
 "EDITOR SETTING
 
-
 nnoremap <up> gk
 nnoremap <down> gj
 inoremap <A-j> <C-o>j

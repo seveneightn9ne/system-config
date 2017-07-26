@@ -1,0 +1,88 @@
+# System Setup 17.04 Ubuntu Gnome
+
+# dropbox.com - install dropbox
+# it's first so it can sync while we do other stuff
+
+sudo apt install curl gnome-tweak-tool zsh vim vim-gtk3 git indicator-multiload trash-cli pass python-pip steam terminator
+sudo pip install docopt pyperclip
+
+# oh-my-zsh
+wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+chsh -s /usr/bin/zsh
+# log out/in
+
+# Give the SSH key a password!!
+ssh-keygen -t rsa -b 4096 -C "jess@jesskenney.com"
+ssh-add ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
+# paste into https://github.com/settings/keys
+
+mkdir git; cd git
+git clone git@github.com:seveneightn9ne/system-config.git
+git clone git@github.com:seveneightn9ne/pottery-log.git
+git clone git@github.com:seveneightn9ne/pottery-log-server.git
+git clone git@github.com:seveneightn9ne/hanabi-server.git
+git clone git@github.com:seveneightn9ne/hashpass.git
+cd
+
+cp git/system-config/.aliases ~
+cp git/system-config/.gitconfig ~
+
+# setup vim
+mkdir -p .vim/undo .vim/backup .vim/swap
+cp git/system-config/.vimrc ~
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim # run :PluginInstall
+
+# setup zsh
+cp git/system-config/.zshrc ~
+vi .oh-my-zsh/themes/mh.zsh-theme
+# set the color
+cd .oh-my-zsh
+git commit -am "set custom terminal color"
+
+# Tweak Tool
+# > Appearance > Global Dark Theme
+# > Top Bar > Show date
+# > Windows > Focus Mode > Mouse
+
+# Terminator Preferences
+# Global > Mouse focus > GNOME Default
+# Profiles > General > Copy on selection
+#                    > Terminal bell : Audible beep
+#          > Scrolling > Infinite scrollback
+# Keybindings > copy : Ctrl + C
+#             > paste : Ctrl + V
+# Set terminator as the default terminal:
+sudo update-alternatives --config x-terminal-emulator
+
+# Install Keybase
+curl -O https://prerelease.keybase.io/keybase_amd64.deb
+sudo dpkg -i keybase_amd64.deb
+sudo apt-get install -f
+run_keybase
+
+# Setup GPG for pass
+gpg --import /keybase/private/jessk/secretkey-for-passwords.gpg
+
+# Install Spotify:
+# Instructions from https://www.spotify.com/us/download/linux/
+# 1. Add the Spotify repository signing key to be able to verify downloaded packages
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
+# 2. Add the Spotify repository
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+# 3. Update list of available packages
+sudo apt update
+# 4. Install Spotify
+sudo apt install spotify-client
+
+# Install nodejs
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Install go: follow https://golang.org/doc/install
+tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+vi .profile
+# export PATH=$PATH:/usr/local/go/bin
+
+
