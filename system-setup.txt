@@ -3,7 +3,7 @@
 # dropbox.com - install dropbox
 # it's first so it can sync while we do other stuff
 
-sudo apt install curl gnome-tweak-tool zsh vim vim-gtk3 git indicator-multiload trash-cli pass python-pip steam terminator
+sudo apt install curl gnome-tweak-tool zsh vim vim-gtk3 git indicator-multiload trash-cli pass python-pip python-qt4 steam terminator
 sudo pip install docopt pyperclip
 
 # oh-my-zsh
@@ -88,4 +88,5 @@ vi .profile
 
 # Copy game files from old computer
 
-
+# Install electrum
+# https://electrum.org/#download
